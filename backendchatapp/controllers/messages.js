@@ -42,7 +42,7 @@ const myMessages = async (req, res) => {
         }).populate({
             path: "user",
             select:"userName"
-        }).sort({createdAt: -1}).skip(skip).limit(limit)
+        }).sort({createdAt: -1})
         res.send({
             data: messages,
             status: true,
