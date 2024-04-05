@@ -5,7 +5,7 @@ const router = require("express").Router()
 
 
 router.post("/createChat",verifyToken,createPrivateChat);
-router.post("/mychats",verifyToken,myChats);
+router.get("/mychats",verifyToken,myChats);
 router.post("/groupChat",verifyToken,createGroupChat);
 router.post("/Chatbyid",verifyToken,chatById);
 
